@@ -1,3 +1,7 @@
+import restaurentapp from "../assets/restaurentapp.png";
+import studenthub from "../assets/studenthub.png";
+import pulsefit from "../assets/pulsefit.png";
+
 export const portfolioData = {
   en: {
     nav: {
@@ -118,7 +122,7 @@ export const portfolioData = {
             "User authentication & profile order history",
             "Real-time cart state and checkout simulation"
           ],
-          image: "/assets/restaurentapp.png",
+          image: restaurentapp,
           github: "https://github.com/meram-amr/restaurant-ordering-app.git",
           demo: "https://restaurant-ordering-add.vercel.app/",
           accentColor: "from-purple-500 to-indigo-600"
@@ -137,7 +141,7 @@ export const portfolioData = {
             "Client-side form validation with visual alerts",
             "Clean analytics widgets and dark mode compatibility"
           ],
-          image: "/assets/studenthub.png",
+          image: studenthub,
           github: "https://github.com/AhmedHassan-Ahmed/student-hub.git",
           demo: "https://student-hub-neon.vercel.app/",
           accentColor: "from-indigo-500 to-violet-600"
@@ -156,7 +160,7 @@ export const portfolioData = {
             "Mobile-first navigation menu and responsive typography",
             "Interactive product feature specification showcase"
           ],
-          image: "/assets/pulsefit.png",
+          image: pulsefit,
           github: "https://github.com/meram-amr/pulsefit.git",
           demo: "https://meram-amr.github.io/pulsefit/",
           accentColor: "from-purple-600 to-pink-600"
@@ -387,8 +391,10 @@ export const portfolioData = {
             "نظام تسجيل دخول المستخدمين وحفظ سجل الطلبات",
             "سلة تسوق فورية وتجربة إنهاء طلب متكاملة وسلسة"
           ],
-          github: "https://github.com/meram-amr/restaurant-ordering-app",
-          demo: "https://restaurant-app-demo.vercel.app",
+          image: restaurentapp,
+
+          github: "https://github.com/meram-amr/restaurant-ordering-app.git",
+          demo: "https://restaurant-ordering-add.vercel.app/",
           accentColor: "from-purple-500 to-indigo-600"
         },
         {
@@ -405,9 +411,9 @@ export const portfolioData = {
             "التحقق الفوري من صحة النماذج والمدخلات مع تنبيهات بصرية",
             "عناصر إحصائية أنيقة وتوافق كامل مع المظهرين الداكن والفاتح"
           ],
-          github: "https://github.com/meram-amr/student-hub-dashboard",
-          demo: "https://student-hub-demo.vercel.app",
-          accentColor: "from-indigo-500 to-violet-600"
+          image: studenthub,
+          github: "https://github.com/AhmedHassan-Ahmed/student-hub.git",
+          demo: "https://student-hub-neon.vercel.app/", accentColor: "from-indigo-500 to-violet-600"
         },
         {
           id: "pulsefit-smartwatch",
@@ -423,8 +429,9 @@ export const portfolioData = {
             "قائمة تنقل متجاوبة بأسلوب Mobile-First مخصص للهواتف",
             "عرض تفاعلي لمواصفات المنتج ومميزاته الرياضية"
           ],
-          github: "https://github.com/meram-amr/pulsefit-landing",
-          demo: "https://pulsefit-demo.vercel.app",
+          image: pulsefit,
+          github: "https://github.com/meram-amr/pulsefit.git",
+          demo: "https://meram-amr.github.io/pulsefit/",
           accentColor: "from-purple-600 to-pink-600"
         }
       ]
