@@ -5,6 +5,24 @@ import { Github } from './Icons';
 import { useLanguage } from '../context/LanguageContext';
 import { portfolioData } from '../data/portfolioData';
 import ProjectCard from './ProjectCard';
+import pulsefit from "../../assets/pulsefit.png";
+import triptale from "../../assets/restaurentapp.png";
+import eventhub from "../../assets/studenthub.png";
+
+export const projects = [
+  {
+    title: "PulseFIT",
+    image: pulsefit,
+  },
+  {
+    title: "TripTale",
+    image: triptale,
+  },
+  {
+    title: "EventHub",
+    image: eventhub,
+  },
+];
 
 export default function Projects() {
   const { language } = useLanguage();
