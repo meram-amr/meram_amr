@@ -59,11 +59,10 @@ export default function Navbar({ onOpenResume }) {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-300">
         <nav
-          className={`max-w-7xl mx-auto rounded-2xl transition-all duration-300 ${
-            scrolled
-              ? 'glass-nav py-3 px-5 shadow-lg shadow-purple-950/10'
-              : 'bg-transparent py-4 px-2'
-          }`}
+          className={`max-w-7xl mx-auto rounded-2xl transition-all duration-300 ${scrolled
+            ? 'glass-nav py-3 px-5 shadow-lg shadow-purple-950/10'
+            : 'bg-transparent py-4 px-2'
+            }`}
         >
           <div className="flex items-center justify-between">
             {/* Brand / Logo */}
@@ -83,7 +82,7 @@ export default function Navbar({ onOpenResume }) {
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-base tracking-tight text-white dark:text-white text-slate-900 group-hover:text-purple-400 transition-colors">
+                <span className="font-bold text-base tracking-tight dark:text-white text-slate-900 group-hover:text-purple-400 transition-colors">
                   Meram Amr
                 </span>
                 <span className="text-[11px] text-purple-400 font-medium tracking-wide uppercase">
@@ -100,11 +99,10 @@ export default function Navbar({ onOpenResume }) {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className={`relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? 'text-white dark:text-white text-purple-600'
-                        : 'text-slate-400 hover:text-slate-200 dark:text-slate-400 dark:hover:text-white'
-                    }`}
+                    className={`relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${isActive
+                      ? 'text-white dark:text-white text-purple-600'
+                      : 'text-slate-400 hover:text-slate-200 dark:text-slate-400 dark:hover:text-white'
+                      }`}
                   >
                     {isActive && (
                       <motion.div
@@ -189,11 +187,10 @@ export default function Navbar({ onOpenResume }) {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className={`text-start px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                    activeSection === link.id
-                      ? 'bg-purple-600/20 text-purple-400 border border-purple-500/30'
-                      : 'text-slate-300 hover:bg-white/5'
-                  }`}
+                  className={`text-start px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${activeSection === link.id
+                    ? 'bg-purple-600/20 text-purple-400 border border-purple-500/30'
+                    : 'text-slate-300 hover:bg-white/5'
+                    }`}
                 >
                   {link.label}
                 </button>

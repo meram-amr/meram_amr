@@ -12,50 +12,17 @@ export default function ResumeModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handlePrint = () => {
-    window.print();
+  const handleViewCV = () => {
+    window.open("/Meram_Amr_Resume.pdf", "_blank");
   };
 
-  const handleDownloadMarkdown = () => {
-    const mdContent = `# Meram Amr - Frontend Developer & CS Student
-Email: meramamr8@gmail.com | Phone: +20 155 514 4498 | Location: Giza, Egypt
-GitHub: https://github.com/meram-amr | LinkedIn: https://linkedin.com/in/meram-amr
-
-## SUMMARY
-4th-year Computer Science student at Helwan University specializing in building responsive, high-performance web applications using React & modern JS.
-
-## EDUCATION
-Bachelor of Computer Science (2023 - Present)
-Faculty of Computers and Artificial Intelligence, Helwan University, Cairo, Egypt
-
-## WORK EXPERIENCE & INTERNSHIPS
-- Front-End React Trainee | Digital Egyptian Pioneers Initiative (DEPI) (07/2026 - Present)
-  * Developing responsive interfaces using HTML5, CSS3, JS, Bootstrap, TypeScript, React.js.
-  * State management, routing, form handling, and Node.js/Express REST API integration.
-- Front-End React Trainee | TechMaster Academy (07/2026 - Present)
-  * 8-week intensive hands-on program focused on modern frontend practices, UI/UX, and real-world team workflows.
-
-## FEATURED PROJECTS
-- Restaurant Ordering App (React.js, Tailwind CSS, REST APIs, Express)
-  * Interactive food ordering platform with dynamic menu filtering, customization, auth, and order management.
-- Student-Hub Dashboard (React, Tailwind CSS)
-  * Academic dashboard with dynamic resource creation, form validation, and interactive action cards.
-- PulseFit Smartwatch Landing (HTML5, CSS3, JavaScript)
-  * Smartwatch landing page featuring local-storage dark mode, smooth animations, and mobile-first navigation.
-
-## TECHNICAL SKILLS
-- Frontend Core: HTML5, CSS3, JavaScript (ES6+), TypeScript
-- Frameworks & Libraries: React.js, React Router, Context API, Tailwind CSS, Bootstrap, Material UI
-- Tools & Build: Vite, Git, GitHub, REST APIs
-- Languages: Arabic (Native), English (Intermediate)
-`;
-    const blob = new Blob([mdContent], { type: 'text/markdown;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Meram_Amr_Resume.md';
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Meram_Amr_Resume.pdf";
+    link.download = "Meram_Amr_Resume.pdf";
+    document.body.appendChild(link);
     link.click();
-    URL.revokeObjectURL(url);
+    document.body.removeChild(link);
   };
 
   return (
@@ -87,16 +54,16 @@ Faculty of Computers and Artificial Intelligence, Helwan University, Cairo, Egyp
 
           <div className="flex items-center gap-2">
             <button
-              onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold shadow-glow-sm transition-all"
+              onClick={handleViewCV}
+              className="flex items-center gap-1.5 px-3.5 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold shadow-glow-sm transition-all"
             >
-              <Printer className="w-3.5 h-3.5" />
-              <span>{t.resumeModal.printBtn}</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span>View CV</span>
             </button>
 
             <button
-              onClick={handleDownloadMarkdown}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 text-xs font-semibold transition-all"
+              onClick={handleDownloadCV}
+              className="flex items-center gap-1.5 px-3.5 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 text-xs font-semibold transition-all"
             >
               <Download className="w-3.5 h-3.5" />
               <span>{t.resumeModal.downloadBtn}</span>
@@ -113,7 +80,7 @@ Faculty of Computers and Artificial Intelligence, Helwan University, Cairo, Egyp
 
         {/* Printable CV Content Sheet */}
         <div id="printable-resume" className="space-y-8 text-slate-200">
-          
+
           {/* Header */}
           <div className="border-b border-white/10 pb-6">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-100 mb-1">

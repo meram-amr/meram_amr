@@ -13,19 +13,22 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const filters = [
-    { id: 'all', label: t.filterAll },
-    { id: 'react', label: 'React.js' },
-    { id: 'fullstack', label: language === 'en' ? 'Fullstack & APIs' : 'تطبيقات متكاملة وAPIs' },
-    { id: 'landing', label: language === 'en' ? 'Landing & UI' : 'صفحات هبوط وUI' }
+  const categories = [
+    ...new Set(t.items.map((project) => project.category))
   ];
 
-  const filteredProjects = t.items.filter(item => {
+  const filters = [
+    { id: 'all', label: t.filterAll },
+    ...categories.map((category) => ({
+      id: category,
+      label: category
+    }))
+  ];
+
+  const filteredProjects = t.items.filter((project) => {
     if (activeFilter === 'all') return true;
-    if (activeFilter === 'react') return item.technologies.some(tech => tech.toLowerCase().includes('react'));
-    if (activeFilter === 'fullstack') return item.category.toLowerCase().includes('fullstack') || item.technologies.some(tech => tech.toLowerCase().includes('api'));
-    if (activeFilter === 'landing') return item.category.toLowerCase().includes('landing');
-    return true;
+
+    return project.category === activeFilter;
   });
 
   return (
@@ -34,7 +37,7 @@ export default function Projects() {
       <div className="glow-orb-purple -top-20 -right-20 opacity-40" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.div
@@ -65,11 +68,10 @@ export default function Projects() {
               <button
                 key={f.id}
                 onClick={() => setActiveFilter(f.id)}
-                className={`relative px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
-                  isActive
-                    ? 'text-white shadow-glow-sm'
-                    : 'text-slate-400 hover:text-slate-200 bg-white/5 border border-white/10'
-                }`}
+                className={`relative px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${isActive
+                  ? 'text-white shadow-glow-sm'
+                  : 'text-slate-400 hover:text-slate-200 bg-white/5 border border-white/10'
+                  }`}
               >
                 {isActive && (
                   <motion.div
@@ -85,8 +87,8 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <motion.div 
-          layout 
+        <motion.div
+          layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
         >
           <AnimatePresence>
@@ -118,7 +120,7 @@ export default function Projects() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-2xl bg-dark-card border border-purple-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-purple-950/50 z-10 max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-2xl bg-dark-card border border-purple-500/30 rounded-3xl p-6 sm:p-4 shadow-2xl shadow-purple-950/50 z-10 max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button */}
               <button

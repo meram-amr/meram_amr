@@ -28,7 +28,7 @@ export const portfolioData = {
     },
     about: {
       title: "About Me",
-      subtitle: "Education & Engineering Philosophy",
+      subtitle: "Education & Services",
       degreeTitle: "Bachelor of Computer Science",
       faculty: "Faculty of Computers and Artificial Intelligence",
       university: "Helwan University",
@@ -61,7 +61,7 @@ export const portfolioData = {
     },
     experience: {
       title: "Work Experience & Internships",
-      subtitle: "Professional Training & Hands-On Engineering",
+      subtitle: "Professional Training & Experiences",
       items: [
         {
           role: "Front-End React Trainee",
@@ -118,8 +118,9 @@ export const portfolioData = {
             "User authentication & profile order history",
             "Real-time cart state and checkout simulation"
           ],
-          github: "https://github.com/meram-amr/restaurant-ordering-app",
-          demo: "https://restaurant-app-demo.vercel.app",
+          image: "/assets/restaurentapp.png",
+          github: "https://github.com/meram-amr/restaurant-ordering-app.git",
+          demo: "https://restaurant-ordering-add.vercel.app/",
           accentColor: "from-purple-500 to-indigo-600"
         },
         {
@@ -136,8 +137,9 @@ export const portfolioData = {
             "Client-side form validation with visual alerts",
             "Clean analytics widgets and dark mode compatibility"
           ],
-          github: "https://github.com/meram-amr/student-hub-dashboard",
-          demo: "https://student-hub-demo.vercel.app",
+          image: "/assets/studenthub.png",
+          github: "https://github.com/AhmedHassan-Ahmed/student-hub.git",
+          demo: "https://student-hub-neon.vercel.app/",
           accentColor: "from-indigo-500 to-violet-600"
         },
         {
@@ -154,8 +156,9 @@ export const portfolioData = {
             "Mobile-first navigation menu and responsive typography",
             "Interactive product feature specification showcase"
           ],
-          github: "https://github.com/meram-amr/pulsefit-landing",
-          demo: "https://pulsefit-demo.vercel.app",
+          image: "/assets/pulsefit.png",
+          github: "https://github.com/meram-amr/pulsefit.git",
+          demo: "https://meram-amr.github.io/pulsefit/",
           accentColor: "from-purple-600 to-pink-600"
         }
       ]
@@ -226,7 +229,7 @@ export const portfolioData = {
         location: {
           label: "Location",
           value: "Giza, Egypt",
-          sub: "Open to Remote & On-site",
+          sub: "Open to Remote & On-site & Freelance",
           action: "View Map"
         }
       },

@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  Calendar, 
-  MapPin, 
-  Layout, 
-  Zap, 
-  Layers, 
-  Boxes, 
-  CheckCircle2, 
+import {
+  GraduationCap,
+  Calendar,
+  MapPin,
+  Layout,
+  Zap,
+  Layers,
+  Boxes,
+  CheckCircle2,
   Award,
   BookOpen
 } from 'lucide-react';
@@ -32,7 +32,7 @@ export default function About() {
       <div className="glow-orb-indigo -bottom-20 -left-20 opacity-50" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
@@ -56,7 +56,7 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Education Primary Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -76,7 +76,7 @@ export default function About() {
                       <GraduationCap className="w-7 h-7" />
                     </div>
                   </div>
-                  <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/30">
+                  <span className="px-3.5 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-500 border border-purple-500/30">
                     {t.period}
                   </span>
                 </div>

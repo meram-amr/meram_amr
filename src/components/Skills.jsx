@@ -1,21 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Wrench, 
-  Code2, 
-  Palette, 
-  Braces, 
-  FileCode2, 
-  Route, 
-  Cpu, 
-  Sparkles, 
-  LayoutGrid, 
-  Component, 
-  Zap, 
-  GitBranch, 
-  Network, 
-  Languages, 
-  Globe2 
+import {
+  Wrench,
+  Code2,
+  Palette,
+  Braces,
+  FileCode2,
+  Route,
+  Cpu,
+  Sparkles,
+  LayoutGrid,
+  Component,
+  Zap,
+  GitBranch,
+  Network,
+  Languages,
+  Globe2
 } from 'lucide-react';
 import { Github, ReactIcon } from './Icons';
 import { useLanguage } from '../context/LanguageContext';
@@ -47,7 +47,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 relative overflow-hidden bg-white/[0.01]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
@@ -102,14 +102,14 @@ export default function Skills() {
                         className="flex items-center justify-between p-3 rounded-2xl bg-white/5 hover:bg-purple-600/10 border border-white/5 hover:border-purple-500/30 transition-all duration-300 group/skill"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover/skill:bg-purple-600 group-hover/skill:text-white transition-colors">
+                          <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-500 group-hover/skill:bg-purple-600 group-hover/skill:text-white transition-colors">
                             <IconComponent className="w-4 h-4" />
                           </div>
                           <span className="text-xs font-semibold text-slate-200">
                             {skill.name}
                           </span>
                         </div>
-                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-300 font-medium">
+                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-500 font-medium">
                           {skill.level}
                         </span>
                       </div>

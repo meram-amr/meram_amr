@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ArrowDown, 
-  Download, 
-  Mail, 
-  Sparkles, 
-  Terminal, 
-  Code, 
-  Cpu, 
-  Layers, 
+import {
+  ArrowDown,
+  Download,
+  Mail,
+  Sparkles,
+  Terminal,
+  Code,
+  Cpu,
+  Layers,
   ExternalLink,
   GraduationCap
 } from 'lucide-react';
@@ -38,7 +38,7 @@ export default function Hero({ onOpenResume }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Main Hero Text Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -126,7 +126,7 @@ export default function Hero({ onOpenResume }) {
                   target="_blank"
                   rel="noreferrer"
                   title="GitHub Profile"
-                  className="p-2.5 rounded-xl bg-white/5 hover:bg-purple-600/20 hover:text-purple-400 border border-white/10 transition-all duration-200"
+                  className="p-2.5 text-indigo-300  rounded-xl bg-white/5 hover:bg-purple-600/20 hover:text-purple-400 border border-white/10 transition-all duration-200"
                 >
                   <Github className="w-4 h-4" />
                 </a>
@@ -135,14 +135,14 @@ export default function Hero({ onOpenResume }) {
                   target="_blank"
                   rel="noreferrer"
                   title="LinkedIn Profile"
-                  className="p-2.5 rounded-xl bg-white/5 hover:bg-indigo-600/20 hover:text-indigo-400 border border-white/10 transition-all duration-200"
+                  className="p-2.5 text-indigo-300 rounded-xl bg-white/5 hover:bg-indigo-600/20 hover:text-indigo-400 border border-white/10 transition-all duration-200"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a
                   href={socials.email}
                   title="Send Email"
-                  className="p-2.5 rounded-xl bg-white/5 hover:bg-pink-600/20 hover:text-pink-400 border border-white/10 transition-all duration-200"
+                  className="p-2.5 text-indigo-300  rounded-xl bg-white/5 hover:bg-pink-600/20 hover:text-pink-400 border border-white/10 transition-all duration-200"
                 >
                   <Mail className="w-4 h-4" />
                 </a>
@@ -160,7 +160,7 @@ export default function Hero({ onOpenResume }) {
             {/* Outer Glow container */}
             <div className="relative rounded-3xl p-[1px] bg-gradient-to-b from-purple-500/40 via-indigo-500/20 to-transparent shadow-glow-md">
               <div className="glass-card rounded-3xl p-6 sm:p-7 relative overflow-hidden">
-                
+
                 {/* Window header */}
                 <div className="flex items-center justify-between pb-5 border-b border-white/10 mb-5">
                   <div className="flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function Hero({ onOpenResume }) {
                 {/* Developer Persona Highlights */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-purple-500/10 border border-purple-500/20">
-                    <div className="w-10 h-10 rounded-xl bg-purple-600/30 flex items-center justify-center text-purple-300">
+                    <div className="w-10 h-10 rounded-xl bg-purple-600/30 flex items-center justify-center text-purple-500">
                       <GraduationCap className="w-5 h-5" />
                     </div>
                     <div>
@@ -191,7 +191,7 @@ export default function Hero({ onOpenResume }) {
                   </div>
 
                   <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-indigo-500/10 border border-indigo-500/20">
-                    <div className="w-10 h-10 rounded-xl bg-indigo-600/30 flex items-center justify-center text-indigo-300">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-600/30 flex items-center justify-center text-purple-500">
                       <Code className="w-5 h-5" />
                     </div>
                     <div>
@@ -205,7 +205,7 @@ export default function Hero({ onOpenResume }) {
                   </div>
 
                   <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-violet-500/10 border border-violet-500/20">
-                    <div className="w-10 h-10 rounded-xl bg-violet-600/30 flex items-center justify-center text-violet-300">
+                    <div className="w-10 h-10 rounded-xl bg-violet-600/30 flex items-center justify-center text-purple-500">
                       <Layers className="w-5 h-5" />
                     </div>
                     <div>

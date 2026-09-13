@@ -20,10 +20,10 @@ export default function Footer({ onOpenResume }) {
   };
 
   return (
-    <footer className="relative border-t border-white/10 bg-dark-bg/80 backdrop-blur-xl pt-16 pb-12 overflow-hidden">
+    <footer className="relative border-t border-white/10 bg-dark-bg/10 backdrop-blur-xl pt-16 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
-          
+
           {/* Brand Info */}
           <div className="md:col-span-6 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-4">

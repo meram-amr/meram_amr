@@ -145,16 +145,6 @@
   z-index: -1;
 }
 
-/* Printing styles for resume */
-@media print {
-  body {
-    background: white !important;
-    color: black !important;
-  }
-  .no-print {
-    display: none !important;
-  }
-}
 
 /* Light Mode Overrides for Perfect Contrast */
 html.light,
@@ -223,4 +213,3 @@ html.light,
 .light textarea::placeholder {
   color: #94a3b8 !important;
 }
-
